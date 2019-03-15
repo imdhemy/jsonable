@@ -68,7 +68,7 @@ The response will be like the following:
 ## Available methods
 
 | Method          | Status           | Description  |
-| --------------- |:----------------:| -----------------:|
+| :--------------- |:---------------- | :-----------------|
 | [ok](https://github.com/imdhemy/jsonable/blob/master/src/Jsonable.php#L18)        | 200    | The request has succeeded. The information returned with the response is dependent on the method used in the request. |
 | [created](https://github.com/imdhemy/jsonable/blob/master/src/Jsonable.php#L30) | 201      |   The request has been fulfilled and resulted in a new resource being created.
 | [accepted](https://github.com/imdhemy/jsonable/blob/master/src/Jsonable.php#L42) | 202      |    The request has been accepted for processing, but the processing has not been completed. |
