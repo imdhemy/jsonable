@@ -1,0 +1,17 @@
+{
+    "name": "imdhemy/jsonable",
+    "description": "Laravel JSON response trait.",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "imdhemy",
+            "email": "imdhemy@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0"
+    },
+   "autoload": {
+        "psr-4": {"Imdhemy\\Jsonable\\": "src/"}
+    }
+}
