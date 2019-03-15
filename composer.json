@@ -1,11 +1,17 @@
 {
     "name": "imdhemy/jsonable",
     "description": "Laravel JSON response trait.",
+    "keywords": ["laravel","json","json-api","response","laravel-package"],
+    "license": "MIT",
     "minimum-stability": "dev",
     "authors": [
         {
             "name": "imdhemy",
             "email": "imdhemy@gmail.com"
+        },
+        {
+            "name": "abdelrahman-waziry",
+            "email": "abdelrahman.waziry@gmail.com"
         }
     ],
     "require": {
