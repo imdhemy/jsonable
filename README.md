@@ -1,4 +1,3 @@
-
 # Jsonable
 Laravel JSON response trait. This trait makes it easy for any controller to return a JSON response with the appropriate HTTP status code.
 
@@ -67,18 +66,26 @@ The response will be like the following:
 
 ## Available methods
 
-| Method          | Status           | Description  |
-| :--------------- |:---------------- | :-----------------|
-| **ok**        | 200    | The request has succeeded. The information returned with the response is dependent on the method used in the request. |
-| **created** | 201      |   The request has been fulfilled and resulted in a new resource being created.
-| **accepted** | 202      |    The request has been accepted for processing, but the processing has not been completed. |
-| **badRequest**       | 400    | The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modifications. |
-| **unauthorized** | 401      |   The request requires user authentication. |
-| **paymentRequired** | 402      |    The original intention was that this code might be used as part of some form of digital cash or micropayment scheme, but that has not happened, and this code is not usually used. |
-| **forbidden**        | 403 | The server understood the request, but is refusing to fulfill it. Authorization will not help and the request SHOULD NOT be repeated. |
-| **notFound** | 404 |   The server has not found anything matching the Request-URI. No indication is given of whether the condition is temporary or permanent. |
-| **invalid** | 422      |    The server understands the content type of the request entity, and the syntax of the request entity is correct, but was unable to process the contained instructions. |
+### Success Methods
+| Method | Status code | Description |
+|---|---|---|
+|ok|200|Successful get, patch (return a JSON object)|
+|created|201|Successful post (return a JSON object)|
+|noContent|204|Successful delete|
 
+### Error Status
 
-## Hire me
-I’m a freelance fullstack developer, trainer and speaker based in Egypt, working with companies across the globe. I partner with different developers and teams to execute and build beautiful, robust, secure Web Applications and Mobile Applications (iOS and Android) using the latest engineering techniques. [Learn more about my experience.](http://www.dhemy.studio/#experience)
+| Method | Status code | Description |
+|---|---|---|
+|unauthorized|401|Not authenticated|
+|invalid|403|Authenticated, but no permissions|
+|notFound|404|Not Found|
+|invalid|422|Validation|
+
+### Extra methods
+
+| Method | Status code | Description |
+|---|---|---|
+|accepted|202|Successful post, delete, path - async|
+|badRequest|400|The request could not be understood by the server due to malformed syntax|
+|paymentRequired|402|Payment required|
