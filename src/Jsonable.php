@@ -51,6 +51,16 @@ trait Jsonable
     }
 
     /**
+     * The request successfully deleted the resource
+     *
+     * @return Illuminate\Http\JsonResponse
+     */
+    protected function noContent() : JsonResponse
+    {
+        return response()->json($this->body(null), 204);
+    }
+
+    /**
      * The request could not be understood by the server due to malformed syntax.
      * The client SHOULD NOT repeat the request without modifications.
      *
